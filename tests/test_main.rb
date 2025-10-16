@@ -22,4 +22,8 @@ class CalculatorTest < Minitest::Test
         calculator = Calculator.new
         assert_equal 3, calculator.add('2,-3,4')
       end
+      def test_add_Multiple_negative_numbers
+        calculator = Calculator.new
+        assert_equal -9, calculator.add('-2,-3,-4')
+      end
 end
