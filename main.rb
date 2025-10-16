@@ -4,10 +4,14 @@ class Calculator
   end
 
   def add(numbers)
-    number_array = numbers.split(',').map(&:to_i)
-    if(number_array.length == 0)
-        return 0 
+    return 0 if numbers.nil? || numbers == ""
+    delimeter = ','
+    if numbers.start_with?("//")
+        delimeter = numbers[2]
+        puts 'delimeter changed' + delimeter
     end
+    number_array = numbers.split(delimeter).map(&:to_i)
+    pp number_array
     return number_array.sum
   end
 end

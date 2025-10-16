@@ -14,4 +14,8 @@ class CalculatorTest < Minitest::Test
         calculator = Calculator.new
         assert_equal 157, calculator.add('21,37,42,57')
       end
+      def test_add_numbers_simple_addition_different_delimiter
+        calculator = Calculator.new
+        assert_equal 3, calculator.add("//;\n1;2")
+      end
 end
