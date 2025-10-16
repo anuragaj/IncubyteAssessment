@@ -8,5 +8,6 @@ class Calculator
     if(number_array.length == 0)
         return 0 
     end
+    return number_array.sum
   end
 end
